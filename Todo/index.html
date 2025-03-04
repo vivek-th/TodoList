@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To-do list</title>
+    <link rel="stylesheet" href="style.css">
+  </head>
+  
+  <body>
+    <!-- my tabs -->
+    <div class="navbar">
+      <img class="logo" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRY9KvjiwsH3NKScz-ZUXVmOMBVnXuD59UbkA&s" alt="logo">
+      <h1>My List</h1>
+    </div>
+    
+    <div>
+      <button onclick="openTab('ItemsTab')">Category</button>
+      <button onclick="openTab('TasksTab')">Items</button>
+    </div>
+
+    <!-- item tab -->
+    <div id="ItemsTab" class="tabcontent">
+      <h2>Category</h2>
+      <form id="itemForm">
+        <label for="itemName">Enter Category:</label>
+        <input type="text" placeholder="Enter category" id="itemName" required> <br>
+
+        <label for="IsImmediate"> Is Immediate:</label>
+        <label for="yesImmediate"> Yes</label>
+        <input type="radio" name="IsImmediate" id="yesImmediate" value="true" required>
+        
+        <label for="noImmediate">No</label>
+        <input type="radio" name="IsImmediate" id="noImmediate" value="false" required>  <br>
+        
+        <div id="dueDateContainer">
+          <label for="dueDate">Due date:</label>
+          <input type="date" id="dueDate">
+        </div>
+    
+        <input type="submit" value="submit">
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Category</th>
+            <th>Due Date</th>
+            <th>Immediate</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="itemTable"></tbody>
+      </table>
+    </div>
+
+    <!-- task tab -->
+    <div id="TasksTab" class="tabcontent" style="display: none">
+      <h2>Items for: <span id="currentItemName">All Categories</span></h2>
+      
+      <form id="taskForm">
+        <label for="categorySelect">Select Category:</label>
+        <select id="categorySelect" required>
+          <option value="all" selected>All</option>
+        </select> <br>
+
+        <input type="text" id="taskName" placeholder="Enter task" required />
+        <button type="submit">Add Task</button>
+      </form>
+
+      <table>
+        <thead>
+          <tr>
+            <th>Task Name</th>
+            <th>Category</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="taskTable"></tbody>
+      </table>
+    </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

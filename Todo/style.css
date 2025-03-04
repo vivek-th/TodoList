@@ -1,0 +1,78 @@
+ 
+  
+  h1, h2 {
+    text-align: center;
+    color: #333;
+  }
+  
+  /* This is Navbar */
+  .navbar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #007BFF;
+    padding: 10px;
+  }
+  
+  .navbar .logo {
+    width: 50px;
+    height: 50px;
+  }
+  
+  button {
+    background-color: #007BFF;
+    color: white;
+   
+  }
+  
+  button:hover {
+    background-color: #0056b3;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    margin-bottom: 5px;
+  }
+  
+  /* Table styles */
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px auto;
+    max-width: 600px;
+  }
+  
+  th, td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+  }
+  
+  th {
+    background-color: #007BFF;
+    color: white;
+  }
+  
+  td button {
+    background-color: #dc3545;
+  }
+  
+  td button:hover {
+    background-color: #c82333;
+  }
+
+  .tabcontent {
+    display: none;
+    padding: 20px;
+  }
+
+  .tabcontent.active {
+    display: block;
+  }
+  
